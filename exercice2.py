@@ -1,11 +1,18 @@
-a = 25
-b = 15
-c = 35
-if (a >= b and a <= c) or (a >= c and a <= b):
-    median = a
-elif (b >= a and b <= c) or (b >= c and b <= a):
-    median = b
-else:
-    median = c
+numbers = []
 
-print("La median entre les trois nombres est", median)
+input_len = int(input("Enter the number of values: "))
+
+for i in range(input_len):
+    val = float(input(f"Enter number {i+1}: "))
+    numbers.append(val)
+
+numbers.sort()
+
+n = len(numbers)
+
+if n % 2 == 1:   
+    median = numbers[n // 2]
+else:            
+    median = (numbers[n//2 - 1] + numbers[n//2]) / 2
+
+print("La médiane est :", median)
