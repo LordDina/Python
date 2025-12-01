@@ -1,7 +1,6 @@
-a = int(input("entrer le premier nombre: "))
-b = int(input("entrer le deuxieme nombre: "))
-c = int(input("entrer le troisiem nombre: "))
-
+a = 20
+b = 25
+c = 30
 if (a >= b and a <= c) or (a >= c and a <= b):
     median = a
 elif (b >= a and b <= c) or (b >= c and b <= a):
@@ -9,5 +8,4 @@ elif (b >= a and b <= c) or (b >= c and b <= a):
 else:
     median = c
 
-print("La median est")
-print(median)
+print("La median est", median)
